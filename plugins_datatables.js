@@ -195,12 +195,3 @@ jQuery.fn.dataTableExt.oSort['neg-currency-desc'] = function (a, b) {
 
     return y - x;
 }; // This is just a sample script. Paste your real code (javascript or HTML) here.
-
-/* Create an array with the values of all the select options in a column */
-$.fn.dataTableExt.afnSortData['dom-select'] = function (oSettings, iColumn) {
-    var aData = [];
-    $('td:eq(' + iColumn + ') select', oSettings.oApi._fnGetTrNodes(oSettings)).each(function () {
-        aData.push($(this).val());
-    });
-    return aData;
-}
